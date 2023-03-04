@@ -2,12 +2,14 @@ package br.com.curso.biblioteca.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 
 import java.util.Date;
 
 @Entity
 @Table(name = "TB_EXEMPLAR_REVISTA")
+@PrimaryKeyJoinColumn(name = "idObra")
 public class Revista extends ObraFisica {
     @Column(nullable = false)
     protected int numero;

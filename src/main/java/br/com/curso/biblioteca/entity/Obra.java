@@ -6,6 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "TB_EXEMPLAR_OBRA")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Obra {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

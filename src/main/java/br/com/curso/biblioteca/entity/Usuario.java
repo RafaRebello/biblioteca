@@ -3,8 +3,11 @@ package br.com.curso.biblioteca.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "TB_USUARIO")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +18,9 @@ public abstract class Usuario {
     protected String rg;
     @Column(nullable = false)
     protected String email;
+
+    @OneToMany(mappedBy = "usuario")
+    protected List<Emprestimo> emprestimos;
 
     public Usuario(){
 

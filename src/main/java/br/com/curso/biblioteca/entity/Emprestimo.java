@@ -12,7 +12,31 @@ public class Emprestimo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "idUsuario", referencedColumnName = "id")
+    private Usuario usuario;
+
+    @OneToOne
+    @JoinColumn(name = "idObra", referencedColumnName = "id")
+    private Obra obra;
+
     @Column(nullable = false)
     private Date data;
+
+    public Emprestimo() {
+    }
+
+    public Emprestimo(Long id, Date data) {
+        this.id = id;
+        this.data = data;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Date getData() {
+        return data;
+    }
 
 }

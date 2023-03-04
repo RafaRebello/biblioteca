@@ -2,10 +2,12 @@ package br.com.curso.biblioteca.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "TB_PROFESSOR")
+@PrimaryKeyJoinColumn(name = "idUsuario")
 public class Professor extends Usuario {
     @Column(nullable = false)
     protected String titulacao;
