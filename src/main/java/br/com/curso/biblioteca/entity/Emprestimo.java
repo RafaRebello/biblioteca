@@ -29,6 +29,8 @@ public class Emprestimo {
     public Emprestimo(Long id, Date data) {
         this.id = id;
         this.data = data;
+        this.usuario = usuario;
+        this.obra = obra;
     }
 
     public Long getId() {
@@ -37,6 +39,14 @@ public class Emprestimo {
 
     public Date getData() {
         return data;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public Obra getObra() {
+        return obra;
     }
 
 }

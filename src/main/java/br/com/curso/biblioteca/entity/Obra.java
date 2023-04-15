@@ -14,7 +14,7 @@ public abstract class Obra {
     @Column(nullable = false)
     protected String titulo;
     @Column(nullable = false)
-    protected Date datapublicacao;
+    protected Date dataPublicacao;
 
     public Obra(){
 
@@ -23,7 +23,7 @@ public abstract class Obra {
     public Obra(Long id, String titulo, Date datapublicacao) {
         this.id = id;
         this.titulo = titulo;
-        this.datapublicacao = datapublicacao;
+        this.dataPublicacao = datapublicacao;
     }
 
     public Long getId() {
@@ -35,6 +35,6 @@ public abstract class Obra {
     }
 
     public Date getDatapublicacao() {
-        return datapublicacao;
+        return dataPublicacao;
     }
 }
